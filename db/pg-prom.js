@@ -8,9 +8,11 @@ const cn                = {
   user    : process.env.USER,
   password: process.env.DB_PASSWORD
 }
+//uncomment for local use
 // const db                = pgp(cn);
 
 //needs to be set up this way for heroku deployment
+//comment out for local use
 const db                = pgp(process.env.DATABASE_URL)
 
 function showTodos ( req, res, next ){
