@@ -39,17 +39,17 @@ app.get ('/todos/:id' , db.showTodo, ( req , res ) => {
 
 //create one
 app.post ( '/todos' , db.createTodo, ( req , res ) => {
-  res.send ( res.rows );
+  res.redirect ( 'back' );
 });
 
 //update one
 app.put ('/todos/:id' , db.updateTodo, ( req , res ) => {
-  res.send ( res.rows );
+  res.send ( 'ok' );
 });
 
 //delete one
 app.delete ('/todos/:id' , db.deleteTodo, ( req , res ) => {
-  res.send ( res.rows );
+  res.send ( 'ok' );
 });
 
 //listen

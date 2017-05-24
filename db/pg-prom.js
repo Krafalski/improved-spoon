@@ -1,10 +1,10 @@
 const pgp               = require ( 'pg-promise' )({});
 
 const cn                = {
-  host    : 'localhost',
-  port    : 5432,
+  host    : process.env.HOST,
+  port    : process.env.PORT,
   database: 'todos',
-  user    : 'karolinrafalski',
+  user    : process.env.USER,
   password: process.env.DB_PASSWORD
 }
 
@@ -44,7 +44,7 @@ function createTodo ( req , res , next ){
 }
 
 function updateTodo ( req , res , next ){
-  console.log('en route');
+
   db.any ('UPDATE todo  SET task_name=$2, task_desc=$3 WHERE task_id=$1',  [req.params.id, req.body.task_name, req.body.task_desc])
   .then ( ( data ) => {
     res.rows = data;

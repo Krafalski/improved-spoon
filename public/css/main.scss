@@ -1,0 +1,107 @@
+@import "fonts";
+
+$grey       : #6E6367;
+$coral      : #F1857B;
+$pale-gold  : #F0DCBD;
+$dusty-teal : #92B1AC;
+$black      : darken($grey, 40%);
+
+body {
+  font-family: grenadier;
+  text-shadow: 1px 1px 2px $pale-gold;
+  color: $black;
+  background-image: url('../assets/images/Vintage7.png')
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+h1 {
+  font-family: Cameo;
+  color: $pale-gold;
+  font-size: 10vmax;
+  text-align: center;
+  text-shadow: 0 0 4px $black;
+  background-color: $grey;
+  box-shadow: 0 0 4px $black;
+  padding-bottom: .25em;
+  border-radius: 10px;
+}
+
+
+h3 {
+  font-family: grenadier;
+  margin: 0 1px;
+}
+
+h4 {
+  font-family: soucisans;
+  font-size: 3vmax;
+}
+
+p {
+  font-family: soucisans;
+}
+
+h5 {
+  font-family: decoborders;
+}
+
+i:hover {
+  color: $pale-gold;
+}
+
+.new-div, .update-div {
+text-align: center;
+width: 90%;
+margin: auto ;
+margin-bottom: 1em;
+border-radius: 10px;
+ input {
+   padding: 5px;
+   margin-left: .9em;
+ }
+}
+
+.todos,  {
+  text-align: center;
+  width: 90%;
+  margin: auto ;
+  border-radius: 10px;
+
+   .todo {
+     font-family: grenadier;
+     font-size: 4vmax;
+     padding: .5em 0;
+     box-shadow: 0 0 4px $black;
+     padding:.5em;
+     margin-bottom: .7em;
+
+     i {
+       font-size: 3vmax;
+       padding: .9vmax;
+     }
+   }
+}
+
+.main {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  i {
+    text-align: left;
+  }
+}
+.fa-diamond {
+  display:block;
+}
+
+.todo:nth-child(odd) {
+  background-color: $dusty-teal;
+}
+
+.todo:nth-child(even){
+  background-color: $coral;
+}
