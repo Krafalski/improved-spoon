@@ -28,12 +28,16 @@ insert test row if desired
 
 
 #### The mysterious `.env` file - that syncs up with the cn object in the pg-promise.js file
-This .env file is used via the npm module `dotenv` 
+This `.env` file is used via the npm module `dotenv` 
+
 `const dotenv            = require ( 'dotenv' );`
+
 Then as middleware 
+
 `dotenv.load();`
 
 For the local version I have inside my `.env` :
+
 ```
 DB_PASSWORD = 
 PORT = 
@@ -41,10 +45,12 @@ HOST =
 USER = 
 
 ```
+
 Note: no quotes for the strings, no semicolons or commas either
 
+```
 DB_PASSWORD = my computer password for postgres
 PORT = 5432 = my standard port for postgres
 HOST = localhost 
 USER = my user name ( can be found by typing `whoami` in terminal)
-
+```
