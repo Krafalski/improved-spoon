@@ -8,7 +8,8 @@ const cn                = {
   password: process.env.DB_PASSWORD
 }
 
-const db                = pgp(cn);
+// const db                = pgp(cn);
+const db                = pgp(process.env.DATABASE_URL)
 
 function showTodos ( req, res, next ){
   db.many ( "SELECT * FROM todo" )
