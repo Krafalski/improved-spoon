@@ -10,7 +10,6 @@
     "express": "^4.15.3",
     "method-override": "^2.3.9",
     "morgan": "^1.8.1",
-    "pg": "^6.2.3",
     "pg-promise": "^5.7.1"
   }
 }
