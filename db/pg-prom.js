@@ -1,19 +1,15 @@
 const pgp               = require ( 'pg-promise' )({});
 
-//works fine locally, does not work for heroku
-const cn                = {
+
+const cn                =  process.env.DATABASE_URL || {
   host    : process.env.HOST,
   port    : process.env.PORT,
   database: 'todos',
   user    : process.env.USER,
   password: process.env.DB_PASSWORD
 }
-//uncomment for local use
-// const db                = pgp(cn);
 
-//needs to be set up this way for heroku deployment
-//comment out for local use
-const db                = pgp(process.env.DATABASE_URL)
+const db                = pgp(cn)
 
 function showTodos ( req, res, next ){
   db.many ( "SELECT * FROM todo" )
